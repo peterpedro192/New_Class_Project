@@ -1,0 +1,121 @@
+@import url('reset.css');
+
+
+
+
+/* Constants */
+
+
+@basefont: 1em; 
+@darkblue: #003366;
+@darkgreen: #336666;
+@mediumgreen: #999966;
+@grey: #999999;
+@lightgreen: #CCFFCC;;
+@lightyellow: #FFFFCC;
+
+
+@mobile: ~"only screen and (min-width: 30em)";
+@desktop: ~"only screen and (min-width: 60em)";
+
+
+
+
+/* FOR MOBILE DEVICES UP TO 480PX */
+
+
+
+body{
+
+    font-size: 0.875*@basefont;
+    font-family: sans-serif;
+    color: @darkgreen;
+    background: @lightyellow url('../img/background.jpg') repeat left top;
+    max-width: 30*@basefont;
+    margin: 0 auto;
+    line-height: 1.5*@basefont;
+
+
+
+}
+
+
+
+/* replaces h1 with image, used for SEO, rather than just placing image in h1 directly, SEO can still read text though hidden */
+.hidden{
+    display:none;
+} 
+h1{
+    background: url('../../assets/img/logo.png') no-repeat left center;
+    height: 6*@basefont;
+    
+}
+
+h1,h2{
+    font-weight: bold;
+    font-size: 1.5*@basefont;
+    
+}
+
+
+
+
+
+
+.topnav ul, .bottomnav ul{
+
+    margin: 2*@basefont 0;
+    height: 1*@basefont;
+
+    li{
+        width: 100%; 
+        text-align: center;
+
+    }
+
+    a{
+        background-color: @grey;
+        color: @darkgreen;
+        text-decoration: none;
+        display: block;
+        margin: @basefont/2 0;
+
+        &:hover{
+            background-color: @darkblue;
+            color: @lightyellow;
+            font-weight: bold;
+        }    
+}
+
+}
+
+
+.topbanner img{
+    width: 100%;
+    height: 6*@basefont;
+    padding-top:7*@basefont;
+}
+    
+
+
+
+
+h2+p img{
+    height: 12*@basefont;
+    width: 12*@basefont;
+    float: left;
+    padding-right: 1*@basefont;
+    
+}
+
+
+#content{
+    padding: @basefont;
+}
+
+#content p{
+    text-align: justify;
+}
+
+
+
